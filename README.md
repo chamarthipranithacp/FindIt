@@ -73,6 +73,7 @@ Losing personal belongings is a common problem in colleges, universities, office
 
 ## 📂 Project Structure
 
+```
 FindIt/
 │
 ├── frontend/
@@ -89,6 +90,8 @@ FindIt/
 │   └── package.json
 │
 └── README.md
+```
+
 
 
 ## 🚀 Installation
@@ -138,7 +141,7 @@ Run backend
 
 ```bash
 npm start
-```
+
 
 
 ## Frontend Setup
@@ -254,5 +257,6 @@ git push origin feature-name
 GitHub: https://github.com/chamarthipranithacp
 
 **K. SAISWAPNA**
+
 GitHub: https://github.com/Swapna1225
 
