@@ -2,7 +2,6 @@
 
 FindIt is a full-stack web application that helps users report, search, and recover lost items within an organization or campus. The platform enables users to upload lost or found items with images, while administrators verify claims to ensure secure and genuine item recovery.
 
----
 
 ## 📖 Overview
 
@@ -18,7 +17,6 @@ Losing personal belongings is a common problem in colleges, universities, office
 - Track item status
 - Recover items after admin verification
 
----
 
 ## ✨ Features
 
@@ -72,11 +70,9 @@ Losing personal belongings is a common problem in colleges, universities, office
 - Postman
 - VS Code
 
----
 
 ## 📂 Project Structure
 
-```
 FindIt/
 │
 ├── frontend/
@@ -93,9 +89,7 @@ FindIt/
 │   └── package.json
 │
 └── README.md
-```
 
----
 
 ## 🚀 Installation
 
@@ -146,7 +140,6 @@ Run backend
 npm start
 ```
 
----
 
 ## Frontend Setup
 
@@ -185,7 +178,16 @@ screenshots/
 ├── FoundItems.png
 ```
 
----
+<img width="959" height="473" alt="image" src="https://github.com/user-attachments/assets/15481b0b-4a46-48c2-ba65-f1f50561cbca" />
+<img width="959" height="471" alt="image" src="https://github.com/user-attachments/assets/a71a5f00-5cb5-46f8-a8b4-ac238926d45f" />
+<img width="959" height="412" alt="image" src="https://github.com/user-attachments/assets/3cde6824-18f1-4366-9828-c18489cf032d" />
+<img width="959" height="469" alt="image" src="https://github.com/user-attachments/assets/c8c02c02-6770-4cb0-b692-cafaf91246ca" />
+<img width="957" height="475" alt="image" src="https://github.com/user-attachments/assets/d8f002cc-4b2d-404c-8076-8f16fd89aefa" />
+<img width="959" height="473" alt="image" src="https://github.com/user-attachments/assets/b0c58fef-54b9-47cf-a4d7-5f167cbf54b2" />
+<img width="959" height="467" alt="image" src="https://github.com/user-attachments/assets/2f08cfd8-e822-4191-a984-b4ef203ed837" />
+<img width="959" height="443" alt="image" src="https://github.com/user-attachments/assets/23bb1fac-fe8c-4f46-b932-cfaea95409c7" />
+<img width="959" height="461" alt="image" src="https://github.com/user-attachments/assets/ba089f36-4ada-446b-ab3a-8ae0f6344d66" />
+<img width="959" height="468" alt="image" src="https://github.com/user-attachments/assets/264458d3-ef58-4a9f-8e47-eae84b012753" />
 
 ## 🔄 Workflow
 
@@ -197,7 +199,6 @@ screenshots/
 6. Admin verifies ownership.
 7. Item is successfully returned.
 
----
 
 ## 🔒 Security Features
 
@@ -209,8 +210,6 @@ screenshots/
 - Image Verification
 - Admin Authorization
 
----
-
 ## 🌟 Future Enhancements
 
 - AI-based image matching
@@ -221,7 +220,6 @@ screenshots/
 - Advanced filtering
 - Location-based search
 
----
 
 ## 🤝 Contributing
 
@@ -248,13 +246,6 @@ git push origin feature-name
 
 5. Open a Pull Request
 
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
 
 ## 👩‍💻 Author
 
@@ -262,6 +253,6 @@ This project is licensed under the MIT License.
 
 GitHub: https://github.com/chamarthipranithacp
 
----
+**K. SAISWAPNA**
+GitHub: https://github.com/Swapna1225
 
-⭐ If you like this project, don't forget to give it a star!
