@@ -191,9 +191,7 @@ const Dashboard = () => {
         formData.append('images', file);
       });
 
-      const res = await axios.post('/api/items/lost/', formData, {
-        headers: { 'Content-Type': 'multipart/form-data' }
-      });
+      const res = await axios.post('/api/items/lost/', formData);
       
       await fetchData();
       setLostForm({ name: '', category: 'General', brand: '', color: '', description: '', location: '', date: '', phone: '' });
@@ -226,9 +224,7 @@ const Dashboard = () => {
         formData.append('images', file);
       });
 
-      await axios.post('/api/items/found/', formData, {
-        headers: { 'Content-Type': 'multipart/form-data' }
-      });
+      await axios.post('/api/items/found/', formData);
 
       fetchData();
       setFoundForm({ finder_name: user?.name || '', name: '', category: 'Water Bottle', brand: '', color: '', description: '', location: '', date: '', phone: '' });
@@ -265,9 +261,7 @@ const Dashboard = () => {
         formData.append('proof_images', file);
       });
 
-      await axios.post('/api/items/claim/', formData, {
-        headers: { 'Content-Type': 'multipart/form-data' }
-      });
+      await axios.post('/api/items/claim/', formData);
 
       setClaimSubmitting(false);
       setClaimModalOpen(false);
@@ -617,16 +611,6 @@ const Dashboard = () => {
             </button>
           )}
 
-          {(user?.role === 'Administrator' || user?.role === 'Security') && (
-            <div style={{ marginTop: '2rem', paddingTop: '1.2rem', borderTop: '1px solid var(--glass-border)' }}>
-              <h4 style={{ textTransform: 'uppercase', fontSize: '0.75rem', color: 'var(--text-muted)', letterSpacing: '1px', paddingLeft: '0.5rem', marginBottom: '0.5rem' }}>Demo Preset Views</h4>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
-                <button onClick={() => setActiveTab('report-lost')} type="button" className="btn btn-secondary" style={{ padding: '0.3rem 0.6rem', fontSize: '0.75rem' }}>Lost Form</button>
-                <button onClick={() => setActiveTab('report-found')} type="button" className="btn btn-secondary" style={{ padding: '0.3rem 0.6rem', fontSize: '0.75rem' }}>Found Form</button>
-                <button onClick={() => setActiveTab('admin-panel')} type="button" className="btn btn-secondary" style={{ padding: '0.3rem 0.6rem', fontSize: '0.75rem' }}>Admin Control</button>
-              </div>
-            </div>
-          )}
         </aside>
 
         {/* Dynamic Workspace Container */}

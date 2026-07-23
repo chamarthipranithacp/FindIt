@@ -97,48 +97,9 @@ const Login = () => {
           <p style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--accent-cyan)', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '2px' }}>
             FIDES + INDAGARE
           </p>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '2rem' }}>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6' }}>
             "Fides" (Latin: trust, faith) and "Indagare" (Latin: to search, to track down) — a trusted campus search that reunites lost belongings.
           </p>
-
-          <div style={{ marginTop: 'auto' }}>
-            <h4 style={{ color: 'var(--text-primary)', marginBottom: '0.8rem', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Info size={16} style={{ color: 'var(--accent-purple)' }} /> Demo Presets for Testing
-            </h4>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem' }}>
-              <button 
-                onClick={() => handleQuickFill('STU101', 'password123', 'Chamarthi Pranitha', 'Student/Faculty')}
-                className="btn btn-secondary" 
-                style={{ flexDirection: 'column', alignItems: 'flex-start', padding: '0.5rem 0.8rem', fontSize: '0.8rem', gap: '0.2rem' }}>
-                <span style={{ fontWeight: '700' }}>Student</span>
-                <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>STU101</span>
-              </button>
-              <button 
-                onClick={() => handleQuickFill('FAC101', 'password123', 'Dr. Ramesh Kumar', 'Student/Faculty')}
-                className="btn btn-secondary" 
-                style={{ flexDirection: 'column', alignItems: 'flex-start', padding: '0.5rem 0.8rem', fontSize: '0.8rem', gap: '0.2rem' }}>
-                <span style={{ fontWeight: '700' }}>Faculty</span>
-                <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>FAC101</span>
-              </button>
-              <button 
-                onClick={() => handleQuickFill('SEC101', 'password123', 'Officer Prasad', 'Security')}
-                className="btn btn-secondary" 
-                style={{ flexDirection: 'column', alignItems: 'flex-start', padding: '0.5rem 0.8rem', fontSize: '0.8rem', gap: '0.2rem' }}>
-                <span style={{ fontWeight: '700' }}>Security</span>
-                <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>SEC101</span>
-              </button>
-              <button 
-                onClick={() => handleQuickFill('ADM101', 'password123', 'Admin Coordinator', 'Administrator')}
-                className="btn btn-secondary" 
-                style={{ flexDirection: 'column', alignItems: 'flex-start', padding: '0.5rem 0.8rem', fontSize: '0.8rem', gap: '0.2rem' }}>
-                <span style={{ fontWeight: '700' }}>Administrator</span>
-                <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>ADM101</span>
-              </button>
-            </div>
-            <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>
-              *Note: If presets don't exist yet, simply register them using the Register link!
-            </p>
-          </div>
         </div>
 
         {/* Right Side: Login Form */}
