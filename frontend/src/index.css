@@ -444,10 +444,6 @@
 
 body {
   background-color: var(--bg-primary);
-  background-image: 
-    radial-gradient(circle at 20% 20%, var(--gradient-1) 0%, transparent 65%),
-    radial-gradient(circle at 80% 80%, var(--gradient-1) 0%, transparent 65%);
-  background-attachment: fixed;
   color: var(--text-primary);
   min-height: 100vh;
   overflow-x: hidden;
@@ -456,45 +452,83 @@ body {
   transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
-/* Floating Ambient Glow Orbs in Background */
+/* Continuous Moving Animated Background Image Layer */
+.bg-moving-layer {
+  position: fixed;
+  top: -8%;
+  left: -8%;
+  width: 116%;
+  height: 116%;
+  z-index: 0;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(circle at 50% 50%, var(--gradient-1) 0%, transparent 70%),
+    linear-gradient(135deg, rgba(11, 15, 25, 0.45) 0%, rgba(15, 23, 42, 0.58) 100%),
+    url('/bg-wallpaper.svg');
+  background-size: cover, cover, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: bgMovingMotion 28s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+  will-change: transform;
+}
+
+@keyframes bgMovingMotion {
+  0% {
+    transform: scale(1) translate(0px, 0px);
+  }
+  33% {
+    transform: scale(1.06) translate(-20px, 15px);
+  }
+  66% {
+    transform: scale(1.03) translate(15px, -20px);
+  }
+  100% {
+    transform: scale(1.08) translate(-10px, -10px);
+  }
+}
+
+/* Dynamic Ambient Glow Orbs in Background */
 body::before, body::after {
   content: '';
   position: fixed;
   border-radius: 50%;
-  filter: blur(140px);
-  opacity: 0.18;
+  filter: blur(130px);
+  opacity: 0.25;
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
+  will-change: transform;
 }
 
 body::before {
-  width: 600px;
-  height: 600px;
-  background: var(--primary);
-  top: -200px;
+  width: 680px;
+  height: 680px;
+  background: radial-gradient(circle, var(--primary) 0%, var(--accent-purple) 70%, transparent 100%);
+  top: -240px;
   left: -200px;
-  animation: orbFloat1 20s ease-in-out infinite alternate;
+  animation: dynamicAurora1 18s ease-in-out infinite alternate;
 }
 
 body::after {
-  width: 600px;
-  height: 600px;
-  background: var(--primary);
-  bottom: -200px;
+  width: 720px;
+  height: 720px;
+  background: radial-gradient(circle, var(--accent-cyan) 0%, var(--primary) 70%, transparent 100%);
+  bottom: -240px;
   right: -200px;
-  animation: orbFloat2 24s ease-in-out infinite alternate;
+  animation: dynamicAurora2 22s ease-in-out infinite alternate;
 }
 
-@keyframes orbFloat1 {
-  0% { transform: translate(0px, 0px) scale(1); }
-  50% { transform: translate(140px, 90px) scale(1.2); }
-  100% { transform: translate(0px, 0px) scale(1); }
+@keyframes dynamicAurora1 {
+  0% { transform: translate(0px, 0px) rotate(0deg) scale(1); }
+  33% { transform: translate(160px, 110px) rotate(120deg) scale(1.25); }
+  66% { transform: translate(70px, 200px) rotate(240deg) scale(0.9); }
+  100% { transform: translate(0px, 0px) rotate(360deg) scale(1); }
 }
 
-@keyframes orbFloat2 {
-  0% { transform: translate(0px, 0px) scale(1); }
-  50% { transform: translate(-160px, -110px) scale(1.25); }
-  100% { transform: translate(0px, 0px) scale(1); }
+@keyframes dynamicAurora2 {
+  0% { transform: translate(0px, 0px) rotate(0deg) scale(1); }
+  33% { transform: translate(-180px, -140px) rotate(-120deg) scale(1.2); }
+  66% { transform: translate(-90px, -230px) rotate(-240deg) scale(0.88); }
+  100% { transform: translate(0px, 0px) rotate(-360deg) scale(1); }
 }
 
 /* Animations */

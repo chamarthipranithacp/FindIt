@@ -39,6 +39,7 @@ const ProtectedRoute = ({ children }) => {
 function App() {
   return (
     <ThemeProvider>
+      <div className="bg-moving-layer" />
       <AuthProvider>
         <BrowserRouter>
           <Routes>
